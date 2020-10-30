@@ -8,6 +8,8 @@
       <h2 class="card-title" style="font-weight:bold">{{ item.original_title }}</h2>
       <p class="card-text">{{ item.overview }}</p>
       <p class="card-text"><small class="text-muted">{{item.release_date}}</small></p>
+      <p style="font-size:0%">{{ value10 = item.vote_average }}</p>
+      <b-form-rating id="rating-10" v-model="value10" stars="10" disabled show-value precision="1" show-value-max ></b-form-rating>
     </div>
   </div>
 </div>

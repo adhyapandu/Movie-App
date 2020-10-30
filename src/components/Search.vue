@@ -17,10 +17,12 @@
 <div class="card-group" >
   <div class="card" v-for='result in results' :key='result.id'  style="flex: 1 0 25%; border:0px; margin:2%">
     <img class="card-img" v-bind:src="'http://image.tmdb.org/t/p/w500/' +  result.poster_path"  alt="Card image" >
-    <div class="card-body" >
+    <div class="card-body">
       <h2 class="card-title" style="font-weight:bold">{{result.original_title}}</h2>
       <p class="card-text">{{result.overview}}</p>
       <p class="card-text"><small class="text-muted">{{result.release_date}}</small></p>
+      <p style="font-size:0%">{{ value10 = result.vote_average }}</p>
+      <b-form-rating id="rating-10" v-model="value10" stars="10" disabled show-value precision="1" show-value-max ></b-form-rating>
     </div>
   </div>
 </div>
@@ -36,7 +38,7 @@ export default {
     data () {
  return {
   query: '',
-  results: ''
+  results: '',
 }
  },
  methods: {
