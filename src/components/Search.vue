@@ -27,14 +27,20 @@
   </div>
 </div>
 </div>
-<div v-else-if="query == ''"></div>
+<div v-else-if="query == ''">
+  <Movie></Movie>
+</div>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
+import Movie from './Movie.vue';
 export default {
     name: 'Search',
+    components: {
+            Movie
+        },
     data () {
  return {
   query: '',

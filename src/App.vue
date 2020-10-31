@@ -1,18 +1,18 @@
 <template>
   <div id="app">
     <Search />
-    <Movie />
+    <!-- <Movie /> -->
   </div>
 </template>
 
 <script>
 import Search from './components/Search.vue'
-import Movie from './components/Movie.vue'
+// import Movie from './components/Movie.vue'
 
 export default {
   name: 'App',
   components: {
-    Movie,
+    // Movie,
     Search,
   }
 }
